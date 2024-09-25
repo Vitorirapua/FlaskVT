@@ -59,15 +59,11 @@ main form small {
     color: grey;
 }
 
-main aside div{
+main aside {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     flex-wrap: wrap;
-}
-
-main aside div i {
-    margin: .5rem 0;
 }
 
 .center{
@@ -78,10 +74,14 @@ main aside div i {
     color: red;
 }
 
-main aside {
-    padding-top: 1rem;
+aside a{
+   display: flex;
+   flex-direction: column;
+   margin-top: 1rem;
+   padding-bottom: 2rem; 
 }
 
-aside i {
+aside a i{
     font-size: 2rem;
+    text-align: center;
 }

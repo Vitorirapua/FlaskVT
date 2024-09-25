@@ -168,6 +168,10 @@ nav {
     margin: .5rem;
 }
 
+footer a span {
+    font-size: 1rem;
+}
+
 .footer_top div {
     font-size: small;
 }
@@ -221,6 +225,10 @@ nav {
     main .imagens-main img{
         padding: 1rem 5rem;
         width: 25rem;
+    }
+
+    .footer_button a span{
+        font-size: 1.3rem;
     }
 }
 /* 
