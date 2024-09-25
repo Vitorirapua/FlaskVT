@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    {# Faz a carga do CSS adicional caso exista #}
+    {% if page.css %}
+    <link rel="stylesheet" href="/static/css/{{ page['css'] }}">
+    {% endif %}
+
+    {% if page.title == '' %}
+    <title>{{ page.site.name }}</title>
+    {% else %}
+    <title>{{ page.site.name }} - {{ page.title }}</title>
+    {% endif %}
+
+    <link rel="icon" href="/static/img/logo.png">
+</head>
+
+<body>
+    <div id="wrap">
+
+        <header>
+            <div>
+                <a href="/" id="left-top">
+                    <img src="/static/img/logo.png" alt="Logo do meu site">
+                    <h1>VT </h1>
+                </a>
+                <nav>
+                    <div id="menu">
+                        <a href="/">
+                            <i class="fa-solid fa-house-chimney fa-fw"></i>
+                            <span>Inicio</span>
+                        </a>
+                        <a href="/about">
+                            <i class="fa-solid fa-user fa-fw"></i>
+                            <span>Sobre</span>
+                        </a>
+                        <a href="/contacts">
+                            <i class="fa-solid fa-envelope fa-fw"></i>
+                            <span>Contato</span>
+                        </a>
+                    </div>
+
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <article>
+                {% block article %}{% endblock %}
+            </article>
+    
+            <aside>
+                {% block aside %}{% endblock %}
+            </aside>
+    
+        </main>
+    
+
+
+        <footer class="site-title">
+
+            <div class="footer_top" title="Você pode copiar e reutilizar este conteúdo livremente">
+
+                <a href="/" title="Ir para a pagina inicial"><i class="fa-solid fa-house fa-fw"></i></a>
+                <div><i class="fa-regular fa-copyright fa-flip-horizontal"></i> Copyleft 2024 Vitor irapuã</div>
+                <a href="#wrap" title="Ir para o topo dessa página"><i class="fa-solid fa-circle-up fa-fw"></i></a>
+
+            </div>
+
+            <div class="footer_button">
+
+                <nav>
+
+                    <h4 id="contato">Redes Sociais</h4>
+
+                    <a href="https://www.instagram.com/mlk__vt_/" target="_blank">
+                        <i class="fa-brands fa-square-instagram fa-fw"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <a href="https://linkedin.com/Vitor souza" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-fw"></i>
+                        <span>Linkedin</span>
+                    </a>
+                    <a href="https://github.com/Vitorirapua" target="_blank">
+                        <i class="fa-brands fa-square-github fa-fw"></i>
+                        <span>GitHub</span>
+                    </a>
+                </nav>
+
+
+                <nav>
+
+                    <h4>Links rápidos</h4>
+
+                    <a href="/policies">
+                        <i class="fa-solid fa-lock fa-fw"></i>
+                        <span>Privacidade</span>
+                    </a>
+                    <a href="/contacts">
+                        <i class="fa-solid fa-comments fa-fw"></i>
+                        <span>Contatos</span>
+                    </a>
+                    <a href="/about">
+                        <i class="fa-solid fa-circle-info fa-fw"></i>
+                        <span>Sobre</span>
+                    </a>
+                </nav>
+
+            </div>
+        </footer>
+
+
+    </div> <!-- WRAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</body>
+
+</html>

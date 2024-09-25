@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block article %}
+
+<h2>Faça Contato</h2>
+<p>Preencha os campos abaixo para entrar em contato com a equipe <strong>VT</strong>.</p>
+<p class="center red">Todos os campos obrigatórios.</p>
+
+<form action="contacts.html#" method="post">
+
+    <p>
+        <label for="fieldName">Seu nome:</label>
+        <input type="text" name="name" id="fieldName" required minlength="3">
+    </p>
+
+    <p>
+        <label for="fieldEmail">Seu e-mail:</label>
+        <input type="email" name="email" id="fieldEmail" required>
+    </p>
+
+    <p>
+        <label for="fieldSubject">Assunto:</label>
+        <input type="text" name="subject" id="fieldSubject" required minlength="5">
+    </p>
+
+    <p>
+        <label for="fieldMessage">Mensagem:</label>
+        <textarea name="message" id="fieldMessage" required minlength="5"></textarea>
+    </p>
+
+    <p>
+        <button type="submit">Enviar</button>
+        <small>&larr; Clique somente uma vez</small>
+    </p>
+
+</form>
+
+{% endblock %}
+
+{% block aside %}
+
+<a href="https://www.instagram.com/mlk__vt_/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+    <span>Converse comigo pelo instagram</span>
+</a>
+
+<a href="https://wa.me/5521968677883" target="_blank"></a>
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>Converse comigo pelo instagram</span>
+</a>
+{% endblock %}
